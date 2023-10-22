@@ -67,11 +67,11 @@ Scrolltop
 ----------------------------------------------*/
 const scrolltop = document.getElementById("scrolltop");
 
-function showScrollTop(){
-    if (window.scrollY > 150){
+function showScrollTop() {
+    if (window.scrollY > 150) {
        scrolltop.classList.add("scrolltop--show");
     }  else {
-       scrolltop.classList.remove("scrolltop-show");
+       scrolltop.classList.remove("scrolltop--show");
     }
 }
 
@@ -80,7 +80,7 @@ window.addEventListener("scroll", showScrollTop);
 /* 
 Testimonial Swiper
 ----------------------------------------------*/
-const testimonialSwiper = new Sniper(".testimonial__wrapper", {
+const testimonialSwiper = new Swiper(".testimonial__wrapper", {
     loop: true,
     spaceBetween: 40,
     grabCursor: true,
@@ -102,5 +102,9 @@ const sr = ScrollReveal({
     reset: true,
 });
 
-sr.reveal(".home__content, .about__img, .testimonial__wrapper");
+sr.reveal(".home__content, .about__img, .testimonial__wrapper, .footer__wrapper");
 sr.reveal(".home__img, .about__content", { origin: "top"});
+sr.reveal(
+    ".service__item, .skill__item, .experience__item, .portfolio__project, .blog__card",
+    { interval:100}
+    );
