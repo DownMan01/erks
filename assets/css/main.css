@@ -101,7 +101,7 @@ body{
   font-weight: var(--fw-medium);
   color: var(--color-text);
   margin-top: var(--height-header);
-  background: url(/assets/img/background.jpg);
+  background: #fff;
   background-size: cover;
   background-position: center;/**/
 }
