@@ -3,20 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day Surprise</title>
+    <title>Valentine's Blossoming Flowers</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
-        <h1>Happy Valentine's Day! 🌹</h1>
-        <div id="flowerContainer">
-            <div id="flower" class="hidden">
-                <div class="rose"></div>
-                <div class="stem"></div>
+<body class="not-loaded">
+    <div class="night"></div>
+    <div class="flowers">
+        <div class="flower flower--1">
+            <div class="flower__leafs">
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__center"></div>
             </div>
+            <div class="flower__stem"></div>
         </div>
-        <button onclick="growRose()">Click to Grow a Rose</button>
+
+        <div class="flower flower--2">
+            <div class="flower__leafs">
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__center"></div>
+            </div>
+            <div class="flower__stem"></div>
+        </div>
+
+        <div class="flower flower--3">
+            <div class="flower__leafs">
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__leaf heart-shape"></div>
+                <div class="flower__center"></div>
+            </div>
+            <div class="flower__stem"></div>
+        </div>
     </div>
+
+    <button class="grow-button" onclick="growFlowers()">💖 Grow Love 💖</button>
+
     <script src="script.js"></script>
 </body>
 </html>
