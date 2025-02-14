@@ -1,3 +1,7 @@
-function growFlowers() {
-    document.querySelector(".flowers").classList.add("grow");
-}
+
+onload = () => {
+  const c = setTimeout(() => {
+    document.body.classList.remove("not-loaded");
+    clearTimeout(c);
+  }, 1000);
+};
