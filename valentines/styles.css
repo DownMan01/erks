@@ -1,3 +1,140 @@
+/* Valentine's Day Animation Styles */
+.valentine {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(313.01deg, rgba(221, 84, 133, 1), rgba(132, 22, 72, 1) 81.14%);
+}
+
+#heart-group-1,
+#heart-group-2,
+#heart-group-3,
+#heart-group-4,
+#star-group-1,
+#star-group-2,
+#star-group-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation-timing-function: linear;
+}
+
+#heart-group-1 {
+  background: url('https://firebasestorage.googleapis.com/v0/b/codepen-asset.appspot.com/o/valentine-animation%2Fheart-xs-1.svg?alt=media&token=c8ee973c-fd7a-4b18-b7cf-fd260962768c') 50% 50% no-repeat;
+  filter: blur(12px);
+  z-index: 10;
+  animation: drop 17s 2s infinite;
+}
+
+#heart-group-2 {
+  background: url('https://firebasestorage.googleapis.com/v0/b/codepen-asset.appspot.com/o/valentine-animation%2Fheart-xs-3.svg?alt=media&token=e542fc9c-87de-4817-a42e-3a23c42e9e92') 50% 50% no-repeat;
+  filter: blur(5px);
+  z-index: 20;
+  animation: drop 14s 0s infinite;
+}
+
+#heart-group-3 {
+  background: url('https://firebasestorage.googleapis.com/v0/b/codepen-asset.appspot.com/o/valentine-animation%2Fheart-xs-2.svg?alt=media&token=e542fc9c-87de-4817-a42e-3a23c42e9e92') 50% 50% no-repeat;
+  filter: blur(3px);
+  z-index: 30;
+  animation: drop 12s 1s infinite;
+}
+
+#heart-group-4 {
+  background: url('https://firebasestorage.googleapis.com/v0/b/codepen-asset.appspot.com/o/valentine-animation%2Fheart-xs-1.svg?alt=media&token=c8ee973c-fd7a-4b18-b7cf-fd260962768c') 50% 50% no-repeat;
+  filter: blur(2px);
+  z-index: 40;
+  animation: drop 10s 1s infinite;
+}
+
+#star-group-1 {
+  background: url('https://firebasestorage.googleapis.com/v0/b/codepen-asset.appspot.com/o/valentine-animation%2Fglitter-star.svg?alt=media&token=0b693d8e-e569-4567-8827-10f8c25dbbdd') 50% 50% no-repeat;
+  z-index: 60;
+  animation: glitter 1.8s 0s infinite;
+}
+
+#star-group-2 {
+  background: url('https://firebasestorage.googleapis.com/v0/b/codepen-asset.appspot.com/o/valentine-animation%2Fglitter-star-sm.svg?alt=media&token=13e65b1f-d181-4266-ac34-97485789e1af') 50% 50% no-repeat;
+  z-index: 60;
+  animation: glitter 1s 0s infinite;
+}
+
+#star-group-3 {
+  background: url('https://firebasestorage.googleapis.com/v0/b/codepen-asset.appspot.com/o/valentine-animation%2Fglitter-star-xs.svg?alt=media&token=0516d117-d8c2-4c0e-b0f8-e468b33ede05') 50% 50% no-repeat;
+  z-index: 60;
+  animation: glitter 1.9s 0s infinite;
+}
+
+.heart-fixed {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.heart-lg {
+  background: url('https://firebasestorage.googleapis.com/v0/b/codepen-asset.appspot.com/o/valentine-animation%2Fheart-lg.svg?alt=media&token=aabe9399-f03f-44de-9b55-99025b2981a3') no-repeat;
+  height: 389px;
+  width: 438px;
+  top: 50%;
+  left: -2%;
+  transform: rotate(299deg);
+  filter: blur(1px);
+  z-index: 45;
+}
+
+.heart-sm {
+  background: url('https://firebasestorage.googleapis.com/v0/b/codepen-asset.appspot.com/o/valentine-animation%2Fheart-sm.svg?alt=media&token=2750292c-92fd-41de-8e1d-d8814119a602') no-repeat;
+  height: 264px;
+  width: 299px;
+  top: 30%;
+  left: 65%;
+  transform: rotate(45deg);
+  filter: blur(7px);
+  z-index: 15;
+}
+
+.heart-xs {
+  background: url('https://firebasestorage.googleapis.com/v0/b/codepen-asset.appspot.com/o/valentine-animation%2Fheart-xs-2.svg?alt=media&token=e542fc9c-87de-4817-a42e-3a23c42e9e92') no-repeat;
+  height: 87px;
+  width: 89px;
+  top: 10%;
+  left: 30%;
+  transform: rotate(299deg);
+  filter: blur(3px);
+  z-index: 35;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 1);
+  height: 100vh;
+  opacity: 0.23;
+  width: 100vw;
+  position: absolute;
+  z-index: 100;
+}
+
+@keyframes drop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes glitter {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Existing Styles for the Rose and Button */
 body {
   margin: 0;
   padding: 0;
@@ -11,6 +148,8 @@ body {
 
 .container {
   text-align: center;
+  position: relative;
+  z-index: 200;
 }
 
 h1 {
