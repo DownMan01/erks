@@ -1,55 +1,100 @@
 body {
-    background-color: #ffccd5;
+    background: #ffebef;
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
-h1 {
-    color: #d6336c;
+.night {
+    background: linear-gradient(to bottom, #ff99cc, #ff6699);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
 }
 
-.container {
+.flowers {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 80vh;
 }
 
-.hidden {
-    display: none;
+.flower {
+    position: relative;
+    margin: 20px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 2s ease-in-out;
 }
 
-.rose {
-    width: 100px;
-    height: 0;
+.heart-shape {
+    width: 50px;
+    height: 50px;
     background: red;
-    border-radius: 50% 50% 0 0;
-    transition: height 2s ease-in-out;
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 0;
+    left: 0;
 }
 
-.stem {
+.heart-shape:before,
+.heart-shape:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart-shape:before {
+    top: -25px;
+    left: 0;
+}
+
+.heart-shape:after {
+    left: 25px;
+    top: 0;
+}
+
+.flower__center {
+    width: 30px;
+    height: 30px;
+    background: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.flower__stem {
     width: 10px;
-    height: 0;
-    background: green;
-    transition: height 2s ease-in-out 1s;
-}
-
-.grow .rose {
     height: 100px;
+    background: green;
+    position: absolute;
+    bottom: -100px;
+    left: 20px;
 }
 
-.grow .stem {
-    height: 150px;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
+.grow-button {
+    background: #ff3366;
     color: white;
-    background-color: #d6336c;
+    padding: 15px 30px;
+    font-size: 20px;
     border: none;
+    border-radius: 25px;
     cursor: pointer;
-    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.grow-button:hover {
+    background: #cc0033;
+}
+
+.grow .flower {
+    opacity: 1;
+    transform: scale(1);
 }
