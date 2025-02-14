@@ -16,6 +16,10 @@ h1 {
     height: 80vh;
 }
 
+.hidden {
+    display: none;
+}
+
 .rose {
     width: 100px;
     height: 0;
