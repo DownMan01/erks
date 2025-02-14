@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffebee;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #d32f2f;
+  font-size: 3rem;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #d32f2f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b71c1c;
+}
+
+#roseContainer {
+  margin-top: 20px;
+  position: relative;
+  height: 300px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#rose {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #e91e63;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+#rose.bloom {
+  opacity: 1;
+  width: 100px;
+  height: 150px;
+  background-color: #ff4081;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
