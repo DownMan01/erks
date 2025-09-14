@@ -1762,6 +1762,51 @@
         document.body.style.opacity = '0';
         document.body.style.transform = 'translateY(20px)';
         document.body.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+
+        // Contact form handling
+        const contactForm = document.querySelector('.form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const submitBtn = contactForm.querySelector('.form__submit');
+                const originalText = submitBtn.innerHTML;
+                
+                // Show loading state
+                submitBtn.innerHTML = '<i class="ri-loader-4-line"></i> Sending...';
+                submitBtn.style.opacity = '0.7';
+                submitBtn.style.pointerEvents = 'none';
+                
+                // Simulate form submission (replace with actual form handling)
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="ri-check-line"></i> Message Sent!';
+                    submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.style.opacity = '1';
+                        submitBtn.style.pointerEvents = 'auto';
+                    }, 3000);
+                }, 2000);
+            });
+        }
+
+        // Enhanced form input animations
+        const formInputs = document.querySelectorAll('.form__input');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', () => {
+                input.parentElement.style.transform = 'scale(1)';
+            });
+        });
     </script>
 </body>
 </html>
